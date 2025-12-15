@@ -1,5 +1,5 @@
-from os import name
-
+#I want to print the name and a random quote for every member in the family .Dictionary and List combination
+import random
 family = {
     "father": {
         "name": "Homer Simpson",
@@ -50,3 +50,11 @@ family = {
         }
     ]
 }
+for key in family:
+    if key=="mother" or key=="father":
+        print(family[key]["name"])
+        print(random.choice(family[key]["quotes"]))
+    if key=="children":
+        for item in family[key]:
+            print(item["name"])
+            print(random.choice(item["quotes"]))
